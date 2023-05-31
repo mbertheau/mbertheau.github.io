@@ -1,0 +1,67 @@
+<html<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Markus Bertheau</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    
+    h1 {
+      color: #333;
+    }
+    
+    p {
+      color: #555;
+      line-height: 1.6;
+    }
+    
+    .post {
+      margin-bottom: 40px;
+    }
+    
+    .post-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    
+    .post-date {
+      font-size: 14px;
+      color: #888;
+    }
+    
+    .post-content {
+      margin-top: 10px;
+    }
+    
+    hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Markus Bertheau</h1>
+  
+  <div class="post">
+    <h2 class="post-title">Reformatting the past few commits</h2>
+    <p class="post-date">Posted on May 31, 2023</p>
+    <div class="post-content">
+      <p>
+        Use the following command to reformat a number of commits in one go:
+        </p>
+        <code>
+git rebase --exec "dart format lib/*.dart; dart fix --apply; git commit --amend --no-edit --all --allow-empty" --no-keep-empty -Xtheirs HEAD~44
+</code>
+    </div>
+  </div>
+  
+  <hr>
+  
+</body>
+</html>
